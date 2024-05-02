@@ -1,12 +1,45 @@
-function scrolltop() {
-    let a = window.document;
-    a = location.href = '#home';
+const Form = document.querySelector("form");
+const fullName =document.getElementById("name");
+const email1 =document.getElementById("email");
+const phone =document.getElementById("phone");
+const message =document.getElementById("textarea");
+function emailSend() {
+  const bodyMessage = `Name : ${fullName.value}<br> Email: ${email1.value}<br> Mobile :  ${phone.value}<br> Message:  ${message.value}`;
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "saklanisunil53@gmail.com",
+    Password : "5599C976907A3FCF61109BAACE0558247952",
+    To : 'saklanisunil53@gmail.com',
+    From : "saklanisunil53@gmail.com",
+    Subject : "Someone checked your profile",
+    Body : bodyMessage
+}).then(
+  message => {
+    if(message=='OK'){
+      swal({
+        title: "Good job!",
+        text: "Thank You for Contacting!",
+        icon: "success",
+        button: "Aww yiss!",
+      });
+
+    }
+    else{
+      swal("error", "You clicked the button!", "error");
+
+    }
+
+  }
+);
 }
-let contact = document.getElementById('contactForm');
-contact.addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert(`Sorry Request cannot be accepted due to some technical errors`);
-})
+Form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
+function scrolltop() {
+  let a = window.document;
+  a = location.href = '#home';
+};
 setInterval(() => {
     // get time indicator elements
     let hours = document.getElementById('hours');

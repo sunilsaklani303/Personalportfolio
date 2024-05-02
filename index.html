@@ -15,7 +15,7 @@
     <!-- Navbar Section -->
     <nav id="navbar" class="flex s-around bg-color">
         <div class="left-nav">
-            <h2 class="t-white">Personal Portfolio</h2>
+            <h2 class="t-white">Persional Portfolio</h2>
         </div>
         <div class="right-nav">
             <ul class="flex">
@@ -56,8 +56,8 @@
             <div class="home-content">
                 <h6 class="poppinss">Hi, I'm</h6>
                 <h1 class="t-white">Sunil Saklani</h1>
-                <h4 class="poppinss">Application support Engineer </h4>
-                <a href="./Images/Sunil Kumar Saklani CV" target="_blank"><button
+                <h4 class="poppinss">Application support Engineer and asipiring Frontend Web Developer</h4>
+                <a href="/Images/Sunil Kumar Saklani CV.docx" target="_blank"><button
                         class="btn poppins">Resume</button></a>
                 <a class="btn live poppins" id="hireme" href="https://www.linkedin.com/in/sunil-saklani-ab481a6b"
                     target="_blank">Let's Talk</a>
@@ -241,9 +241,9 @@
         <h1 class=" t-center my-2 t-white f-2">Contact Me</h1>
         <div class="contact-container flex s-around items-centers">
             <div class="form" id="contactForm">
-                <form action="" id="contactFrom">
+                <form onsubmit ="emailSend(); reset(); return false;" action="" id="contactFrom">
                     <div class="name form-div">
-                        <input type="text" name="name" id="name" class="poppins" placeholder="Enter Your Name">
+                        <input type="text" name="name" id="name" class="poppins" placeholder="Enter Your Name" required>
                     </div>
                     <div class="email form-div">
                         <input type="email" name="email" id="email" class="poppins" placeholder="Enter Your Email"
@@ -276,7 +276,7 @@
             <a href="https://www.linkedin.com/in/sunil-saklani-ab481a6b" target="_blank">
                 <li><i class="fa-brands fa-linkedin-in"></i></li>
             </a>
-            <a href="https://github.com/" target="_blank">
+            <a href="https://github.com/Sunil_saklani/" target="_blank">
                 <li><i class="fa-brands fa-github"></i></li>
             </a>
             <a href="https://www.instagram.com/sunilsaklani53?igsh=dGZ0NGU5anNybHJ4" target="_blank">
@@ -287,7 +287,7 @@
             </a>
         </ul>
         <p class="t-center my-2 poppins">&copy; All Rights Reserved - <span class="cpy-white poppins">Sunil
-                Saklani </span></p>
+                Saklani</span></p>
                 <div class="container">
                     <div id="time">
                       <div class="circle" style="--color: #ff2972">
@@ -327,6 +327,9 @@
     </div>
 
 </body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
 <script src="/script.js"></script>
 
 </html>
